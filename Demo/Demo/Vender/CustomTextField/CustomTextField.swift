@@ -98,7 +98,7 @@ class CustomTextField: UITextField {
             return CGRect(x: margin, y: bounds.origin.y, width: bounds.size.width - (rightView?.frame.size.width)! - margin*2 - controlSpacing*2, height: bounds.size.height)
         } else {
             
-            return CGRect(x: margin, y: bounds.origin.y, width: bounds.size.width - margin, height: bounds.size.height)
+            return CGRect(x: margin, y: bounds.origin.y, width: bounds.size.width - margin*2, height: bounds.size.height)
         }
         
     }
@@ -112,7 +112,7 @@ class CustomTextField: UITextField {
             return CGRect(x: margin, y: bounds.origin.y, width: bounds.size.width - (rightView?.frame.size.width)! - margin*2 - controlSpacing*2, height: bounds.size.height)
         } else {
             
-            return CGRect(x: margin, y: bounds.origin.y, width: bounds.size.width - margin, height: bounds.size.height)
+            return CGRect(x: margin, y: bounds.origin.y, width: bounds.size.width - margin*2, height: bounds.size.height)
         }
     }
     
@@ -126,7 +126,7 @@ class CustomTextField: UITextField {
             return CGRect(x: margin, y: bounds.origin.y, width: bounds.size.width - (rightView?.frame.size.width)! - margin*2 - controlSpacing*2 , height: bounds.size.height)
         } else {
             
-            return CGRect(x: margin, y: bounds.origin.y, width: bounds.size.width - margin, height: bounds.size.height)
+            return CGRect(x: margin, y: bounds.origin.y, width: bounds.size.width - margin*2, height: bounds.size.height)
         }
     }
     
