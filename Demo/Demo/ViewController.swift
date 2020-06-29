@@ -44,20 +44,20 @@ class ViewController: UIViewController {
         tf.lineBackgroundColor = UIColor.red
         tf.placeholder = "测试输入框"
         view.addSubview(tf)
+        tf.margin = 5
+//        let label = UILabel.init()
+//        label.text = "右视图"
+//        label.frame = CGRect.init(x: 0.0, y: 0.0, width: 80.0, height: 50)
+//        label.sizeToFit()
+//        tf.rightView = label
+//        tf.rightViewMode = .always
         
-        let label = UILabel.init()
-        label.text = "右视图"
-        label.frame = CGRect.init(x: 0.0, y: 0.0, width: 80.0, height: 50)
-        label.sizeToFit()
-        tf.rightView = label
-        tf.rightViewMode = .always
-        
-//        let label1 = UILabel.init()
-//        label1.text = "左视图"
-//        label1.frame = CGRect.init(x: 0.0, y: 0.0, width: 80.0, height: 50)
-//        label1.sizeToFit()
-//        tf.leftView = label1
-//        tf.leftViewMode = .always
+        let label1 = UILabel.init()
+        label1.text = "左视图"
+        label1.frame = CGRect.init(x: 0.0, y: 0.0, width: 80.0, height: 50)
+        label1.sizeToFit()
+        tf.leftView = label1
+        tf.leftViewMode = .always
         
         tf.snp.makeConstraints { (make) in
             make.center.equalTo(self.view)

@@ -9,7 +9,7 @@
 import UIKit
 
 enum LineType {
-    case underline
+    case underline  // 下划线
     case edgeLine
 }
 
@@ -17,8 +17,9 @@ enum LineType {
 
 class CustomTextField: UITextField {
     
-    let margin: CGFloat = 15.0  // 左右边距
-    let viewMargin : CGFloat = 5.0  // 左右视图间距
+    var margin: CGFloat = 15.0  // 左右边距
+    var controlSpacing : CGFloat = 5.0  // 左右视图间距
+    
     var _lineType : LineType = .underline
     var lineType : LineType {
         get {
@@ -56,10 +57,7 @@ class CustomTextField: UITextField {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         delegate = self
-        
-        
     }
     
     func xh_setupUI() {
@@ -93,11 +91,11 @@ class CustomTextField: UITextField {
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         
         if (leftView != nil && rightView != nil) {
-            return CGRect(x: (leftView?.frame.maxX)! + viewMargin, y: bounds.origin.y, width: bounds.size.width - (rightView?.frame.size.width)! - (leftView?.frame.maxX)! - margin - viewMargin * 2 , height: bounds.size.height)
+            return CGRect(x: (leftView?.frame.maxX)! + controlSpacing, y: bounds.origin.y, width: bounds.size.width - (rightView?.frame.size.width)! - (leftView?.frame.maxX)! - margin - controlSpacing * 2 , height: bounds.size.height)
         }  else if (leftView != nil) {
-            return CGRect(x: (leftView?.frame.maxX)! + viewMargin, y: bounds.origin.y, width: bounds.size.width - (leftView?.frame.maxX)! - margin , height: bounds.size.height)
+            return CGRect(x: (leftView?.frame.maxX)! + controlSpacing, y: bounds.origin.y, width: bounds.size.width - (leftView?.frame.maxX)! - margin - controlSpacing , height: bounds.size.height)
         } else if (rightView != nil) {
-            return CGRect(x: margin, y: bounds.origin.y, width: bounds.size.width - (rightView?.frame.size.width)! - margin*2 - viewMargin*2, height: bounds.size.height)
+            return CGRect(x: margin, y: bounds.origin.y, width: bounds.size.width - (rightView?.frame.size.width)! - margin*2 - controlSpacing*2, height: bounds.size.height)
         } else {
             
             return CGRect(x: margin, y: bounds.origin.y, width: bounds.size.width - margin, height: bounds.size.height)
@@ -107,11 +105,11 @@ class CustomTextField: UITextField {
     
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         if (leftView != nil && rightView != nil) {
-            return CGRect(x: (leftView?.frame.maxX)! + viewMargin, y: bounds.origin.y, width:bounds.size.width - (rightView?.frame.size.width)! - (leftView?.frame.maxX)! - margin - viewMargin * 2, height: bounds.size.height)
+            return CGRect(x: (leftView?.frame.maxX)! + controlSpacing, y: bounds.origin.y, width:bounds.size.width - (rightView?.frame.size.width)! - (leftView?.frame.maxX)! - margin - controlSpacing * 2, height: bounds.size.height)
         } else if (leftView != nil) {
-            return CGRect(x: (leftView?.frame.maxX)! + viewMargin, y: bounds.origin.y, width: bounds.size.width - (leftView?.frame.maxX)! - margin , height: bounds.size.height)
+            return CGRect(x: (leftView?.frame.maxX)! + controlSpacing, y: bounds.origin.y, width: bounds.size.width - (leftView?.frame.maxX)! - margin - controlSpacing , height: bounds.size.height)
         } else if (rightView != nil) {
-            return CGRect(x: margin, y: bounds.origin.y, width: bounds.size.width - (rightView?.frame.size.width)! - margin*2 - viewMargin*2, height: bounds.size.height)
+            return CGRect(x: margin, y: bounds.origin.y, width: bounds.size.width - (rightView?.frame.size.width)! - margin*2 - controlSpacing*2, height: bounds.size.height)
         } else {
             
             return CGRect(x: margin, y: bounds.origin.y, width: bounds.size.width - margin, height: bounds.size.height)
@@ -121,11 +119,11 @@ class CustomTextField: UITextField {
     
     override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
         if (leftView != nil && rightView != nil) {
-            return CGRect(x: (leftView?.frame.maxX)! + viewMargin, y: bounds.origin.y, width:bounds.size.width - (rightView?.frame.size.width)! - (leftView?.frame.maxX)! - margin - viewMargin * 2, height: bounds.size.height)
+            return CGRect(x: (leftView?.frame.maxX)! + controlSpacing, y: bounds.origin.y, width:bounds.size.width - (rightView?.frame.size.width)! - (leftView?.frame.maxX)! - margin - controlSpacing * 2, height: bounds.size.height)
         } else if (leftView != nil) {
-            return CGRect(x: (leftView?.frame.maxX)! + viewMargin, y: bounds.origin.y, width: bounds.size.width - (leftView?.frame.maxX)! - margin , height: bounds.size.height)
+            return CGRect(x: (leftView?.frame.maxX)! + controlSpacing, y: bounds.origin.y, width: bounds.size.width - (leftView?.frame.maxX)! - margin - controlSpacing , height: bounds.size.height)
         } else if (rightView != nil) {
-            return CGRect(x: margin, y: bounds.origin.y, width: bounds.size.width - (rightView?.frame.size.width)! - margin*2 - viewMargin*2 , height: bounds.size.height)
+            return CGRect(x: margin, y: bounds.origin.y, width: bounds.size.width - (rightView?.frame.size.width)! - margin*2 - controlSpacing*2 , height: bounds.size.height)
         } else {
             
             return CGRect(x: margin, y: bounds.origin.y, width: bounds.size.width - margin, height: bounds.size.height)

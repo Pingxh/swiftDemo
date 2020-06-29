@@ -18,9 +18,9 @@ project 'FirstAidLight/FirstAidLight.xcodeproj'
   pod 'NVActivityIndicatorView'
   
   #高德地图
-#  pod 'AMapSearch'
-#  pod 'AMapLocation'
-#  pod 'AMapNavi'
+  pod 'AMapSearch'
+  pod 'AMapLocation'
+  pod 'AMapNavi'
   # 字体大小适配
   pod 'SwiftyFitsize'
   
@@ -47,9 +47,9 @@ project 'Demo/Demo.xcodeproj'
   pod 'NVActivityIndicatorView'
   
   #高德地图
-#  pod 'AMapSearch'
-#  pod 'AMapLocation'
-#  pod 'AMapNavi'
+  pod 'AMapSearch'
+  pod 'AMapLocation'
+  pod 'AMapNavi'
   # 字体大小适配
   pod 'SwiftyFitsize'
   # AOP
