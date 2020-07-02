@@ -72,6 +72,10 @@ class WebViewController: RootViewController {
             case .back:
                 print(jsName, jsData as Any)
                 self.navigationController?.popViewController(animated: true)
+            break
+            case .closepage:
+                print("close")
+                break
             default:
                 break
             }

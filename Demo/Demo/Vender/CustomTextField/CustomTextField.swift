@@ -14,7 +14,6 @@ enum LineType {
 }
 
 
-
 class CustomTextField: UITextField {
     
     var margin: CGFloat = 15.0  // 左右边距

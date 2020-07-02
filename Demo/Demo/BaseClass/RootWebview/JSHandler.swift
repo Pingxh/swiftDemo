@@ -12,6 +12,7 @@ import WebKit
 enum JSHandlerType {
     case normal
     case back
+    case closepage
 }
 // 定义 block
 //typealias vccourse = (JSHandlerType, AnyObject?)
@@ -37,7 +38,7 @@ class JSHandler: NSObject {
         // 注册 JS 方法
         configuration.userContentController.add(self, name: "backPage")
         configuration.userContentController.add(self, name: "showImages")
-
+        configuration.userContentController.add(self, name: "closepage")
         print("\(configuration.userContentController.userScripts)")
     }
     
@@ -58,6 +59,8 @@ extension JSHandler: WKScriptMessageHandler {
     func recordHandle(_ typeStr: String) -> JSHandlerType {
         if typeStr == "backPage" {
             return JSHandlerType.back
+        } else if typeStr == "closepage" {
+            return JSHandlerType.closepage
         } else {
             return JSHandlerType.normal
         }

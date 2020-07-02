@@ -53,8 +53,15 @@ class CountdownVC: RootViewController {
         }
         
         downView.pushBtn.reactive.controlEvents(.touchUpInside).observeValues { (sender) in
+            // 获取本地路径
+            let bundlePath = Bundle.main.bundlePath
+            // 获取本地 html 目录
+            let basePath = "\(bundlePath)/h5"
+            // 获取本地 html 目录 base url
+            let baseUrl = NSURL.fileURL(withPath: basePath, isDirectory: true)
+            let url = "\(baseUrl)/index.html"
             let path = Bundle.main.path(forResource: "JSToOC", ofType: "html")
-            let vc = RootWebViewController.init(htmlPath: path!)
+            let vc = RootWebViewController.init(url: url)
             self.navigationController?.pushViewController(vc, animated: true)
 
         }

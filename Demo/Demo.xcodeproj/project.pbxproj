@@ -10,6 +10,7 @@
 		0090C02C944FDCEFD1E90978 /* libPods-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C326B78AA0E2A602F2461170 /* libPods-Demo.a */; };
 		182F7BFD2478BFC40080E7F8 /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F7BFC2478BFC40080E7F8 /* CustomTableView.swift */; };
 		182F7C0124791C780080E7F8 /* AspectsAOP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F7C0024791C780080E7F8 /* AspectsAOP.swift */; };
+		1837AB3324ADAC800096B35A /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837AB3224ADAC800096B35A /* BaseCollectionCell.swift */; };
 		183993D023C9FE6E0009804E /* XHMenuScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183993CF23C9FE6E0009804E /* XHMenuScrollView.swift */; };
 		18427828247CEC3C00D6C0C1 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18427818247CEC3C00D6C0C1 /* DateExtension.swift */; };
 		18427829247CEC3C00D6C0C1 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18427819247CEC3C00D6C0C1 /* NSObjectExtension.swift */; };
@@ -44,6 +45,7 @@
 		18480C0823C749B400290975 /* MineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18480C0723C749B400290975 /* MineVC.swift */; };
 		18480C0A23C749CD00290975 /* TabBarConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18480C0923C749CD00290975 /* TabBarConfigure.swift */; };
 		18480C0C23C74A3100290975 /* MoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18480C0B23C74A3100290975 /* MoreVC.swift */; };
+		18494C0724AC19F000DA2C2F /* h5 in Resources */ = {isa = PBXBuildFile; fileRef = 18494C0624AC19F000DA2C2F /* h5 */; };
 		184FD42223CEB34A0052435B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184FD42123CEB34A0052435B /* HomeViewModel.swift */; };
 		184FD42423CEC3690052435B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184FD42323CEC3690052435B /* API.swift */; };
 		184FD42623CF09120052435B /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184FD42523CF09120052435B /* NetworkRequest.swift */; };
@@ -85,6 +87,7 @@
 /* Begin PBXFileReference section */
 		182F7BFC2478BFC40080E7F8 /* CustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
 		182F7C0024791C780080E7F8 /* AspectsAOP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectsAOP.swift; sourceTree = "<group>"; };
+		1837AB3224ADAC800096B35A /* BaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionCell.swift; sourceTree = "<group>"; };
 		183993CF23C9FE6E0009804E /* XHMenuScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XHMenuScrollView.swift; sourceTree = "<group>"; };
 		18427818247CEC3C00D6C0C1 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		18427819247CEC3C00D6C0C1 /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
@@ -119,6 +122,7 @@
 		18480C0723C749B400290975 /* MineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineVC.swift; sourceTree = "<group>"; };
 		18480C0923C749CD00290975 /* TabBarConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarConfigure.swift; sourceTree = "<group>"; };
 		18480C0B23C74A3100290975 /* MoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreVC.swift; sourceTree = "<group>"; };
+		18494C0624AC19F000DA2C2F /* h5 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = h5; sourceTree = "<group>"; };
 		184FD42123CEB34A0052435B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		184FD42323CEC3690052435B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		184FD42523CF09120052435B /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
@@ -272,6 +276,14 @@
 			path = RootTabbarController;
 			sourceTree = "<group>";
 		};
+		18494C0824AC761700DA2C2F /* TypeCollection */ = {
+			isa = PBXGroup;
+			children = (
+				1837AB3224ADAC800096B35A /* BaseCollectionCell.swift */,
+			);
+			path = TypeCollection;
+			sourceTree = "<group>";
+		};
 		184FD42023CEB3350052435B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +369,7 @@
 		18A25C9823C5C78C002AF19B /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				18494C0624AC19F000DA2C2F /* h5 */,
 				18427815247CEC1C00D6C0C1 /* Tools */,
 				1855E0DC23D4026100FA001E /* Model */,
 				184FD42023CEB3350052435B /* ViewModel */,
@@ -410,6 +423,7 @@
 		18A25CCE23C5E0FD002AF19B /* BaseClass */ = {
 			isa = PBXGroup;
 			children = (
+				18494C0824AC761700DA2C2F /* TypeCollection */,
 				182F7BFF24791BFD0080E7F8 /* AOP */,
 				18A05EB723CDB14D0070F436 /* Menu */,
 				18A05EB423CD94340070F436 /* XHButton */,
@@ -547,6 +561,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18494C0724AC19F000DA2C2F /* h5 in Resources */,
 				18427833247CEC3D00D6C0C1 /* loading_image@3x.png in Resources */,
 				1845CA0323C88B1E00D57EDD /* JSToOC.html in Resources */,
 				18427832247CEC3D00D6C0C1 /* loading_fail1@3x.png in Resources */,
@@ -629,6 +644,7 @@
 				18FE02D223D69B70008F27A8 /* BasicTypes.swift in Sources */,
 				18480BEC23C6B3E400290975 /* FindVC.swift in Sources */,
 				1842782E247CEC3D00D6C0C1 /* UIViewExtension.swift in Sources */,
+				1837AB3324ADAC800096B35A /* BaseCollectionCell.swift in Sources */,
 				18480C0823C749B400290975 /* MineVC.swift in Sources */,
 				1842782F247CEC3D00D6C0C1 /* Bundle+Extension.swift in Sources */,
 				18427836247CEC8A00D6C0C1 /* PrefixHeader.swift in Sources */,

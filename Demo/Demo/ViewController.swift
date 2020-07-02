@@ -45,6 +45,9 @@ class ViewController: UIViewController {
         tf.placeholder = "测试输入框"
         view.addSubview(tf)
         tf.margin = 5
+        
+        
+        
 //        let label = UILabel.init()
 //        label.text = "右视图"
 //        label.frame = CGRect.init(x: 0.0, y: 0.0, width: 80.0, height: 50)
